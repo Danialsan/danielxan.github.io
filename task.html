@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Daniel-Xan</title>
+
+   <!-- My Style  -->
+   <link rel="stylesheet" href="style.css">
+
+   <!-- My Icon  -->
+   <link rel="icon" href="foto.jpeg">
+   <script src="https://unpkg.com/feather-icons"></script>
+
+   <!-- My Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,800&display=swap"
+      rel="stylesheet">
+
+   <!-- aos -->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+   <!-- navigasi Start  -->
+   <nav>
+      <div class="navbar">
+         <a href="#" class="navbar-brand">DanielXan{};</a>
+      </div>
+
+      <div class="navbar-nav">
+         <a href="index.html">Home</a>
+         <a href="profile.html">Profile</a>
+         <a href="galery.html">Galery</a>
+         <a href="task.html" class="active">Task</a>
+         <a href="#"><i data-feather="github"></i></a>
+      </div>
+
+      <div class="navbar-extra">
+         <a><i data-feather="menu" id="humberger-menu"></i></a>
+      </div>
+   </nav>
+   <!-- navigasi End  -->
+
+   <!-- main task -->
+   <section class="main-task">
+      <h2 data-aos="fade-down">My Task</h2>
+      <p data-aos="fade-down">some tasks to be completed</p>
+      <div class="content-task" data-aos="zoom-in">
+         <div class="input" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <div class="tombol"><button type="button">Tambah tugas</button>
+            </div>
+            <div class="search"><input type="text" id="search" placeholder="Cari tugas..."><a href="#">Cari</a>
+            </div>
+            <hr>
+         </div>
+         <div class="task" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+            <div class="judul-task">
+               <h3>Daftar Tugas</h3>
+            </div>
+            <div class="tumbnail">
+               <ul>
+                  <li>Belajar mengenai apa itu teknologi sebenarya
+                     <div class="btn">
+                        <button class="btn-1">detail</button>
+                        <button class="btn-2">ubah</button>
+                        <button class="btn-3">hapus</button></div>
+                  </li>
+                  <li>Ingin menguasai bahasa pemrograman JavaScript
+                     <div class="btn">
+                        <button class="btn-1">detail</button>
+                        <button class="btn-2">ubah</button>
+                        <button class="btn-3">hapus</button></div>
+                  </li>
+                  <li>Apa saja hubungan yang mengaitkan satu dari yang lain mengenai jaringan
+                     <div class="btn">
+                        <button class="btn-1">detail</button>
+                        <button class="btn-2">ubah</button>
+                        <button class="btn-3">hapus</button></div>
+                  </li>
+                  <li>Ingin belajar menjadi programmer handal
+                     <div class="btn">
+                        <button class="btn-1">detail</button>
+                        <button class="btn-2">ubah</button>
+                        <button class="btn-3">hapus</button></div>
+                  </li>
+                  <li>Bisa menggunakan semua bahasa pemrograman<div class="btn">
+                        <button class="btn-1">detail</button>
+                        <button class="btn-2">ubah</button>
+                        <button class="btn-3">hapus</button></div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <!-- <div class="task" data-aos="zoom-in">
+         <div class="tumbnail" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+            <ul>
+               <li>Belajar mengenai apa itu teknologi sebenarya</li>
+               <li>Ingin menguasai bahasa pemrograman JavaScript</li>
+               <li>Apa saja hubungan yang mengaitkan satu dari yang lain mengenai jaringan</li>
+               <li>Ingin belajar menjadi programmer handal</li>
+               <li>Bisa menggunakan semua bahasa pemrograman</li>
+            </ul>
+         </div>
+         <div class="input" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <div class="input-group1">
+               <input type="text" id="input" class="text" placeholder="Masukkan tugas yang di inginkan">
+            </div>
+            <div class="input-group2">
+               <label for="waktu">Waktu pengerjaan</label> <br>
+               <input type="datetime-local" id="waktu" class="date"> <span>-</span>
+               <input type="datetime-local" id="waktu" class="date">
+            </div>
+            <div class="btn"><a href="#">Lanjutkan!</a></div>
+         </div>
+      </div> -->
+   </section>
+
+   <!-- footer -->
+   <footer>
+      <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="500">
+         Desaigned by <a href="#">Daniel
+            Xan</a>. | @copyright
+         2023</p>
+   </footer>
+   <!-- footer end -->
+
+
+   <!-- script -->
+   <script>
+      feather.replace()
+   </script>
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+      AOS.init();
+   </script>
+
+   <!-- my script -->
+   <script src="script.js"></script>
+
+</body>
+
+</html>

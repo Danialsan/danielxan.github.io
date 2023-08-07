@@ -1,0 +1,589 @@
+:root {
+  --primary: #212121;
+  --bg: salmon;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  background-color: var(--primary);
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* navigasi */
+nav {
+  background-color: var(--primary);
+  height: 4rem;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .navbar-brand {
+  color: var(--bg);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+nav .navbar-nav a {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #979797;
+  margin: 0 0.7rem;
+}
+
+nav .navbar-nav {
+  display: flex;
+}
+
+nav .navbar-nav a:hover {
+  color: var(--bg);
+}
+
+nav .navbar-nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid var(--bg);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+nav .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+nav .navbar-nav .active {
+  color: var(--bg);
+}
+
+nav .navbar-nav .active:target {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid var(--bg);
+  transform: scaleX(0.5);
+  transition: 0.2s linear;
+}
+
+nav .navbar-extra a {
+  color: white;
+}
+
+nav .navbar-extra a #humberger-menu {
+  display: none;
+}
+
+/* main home */
+.main-home {
+  display: flex;
+  height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-home .bio h6 {
+  color: var(--bg);
+  font-size: 0.8rem;
+  /* margin-bottom: 2px; */
+}
+
+.main-home .bio h2 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.main-home .bio .text {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.main-home .bio .dynamic-text {
+  height: 30px;
+  line-height: 33px;
+  overflow: hidden;
+}
+
+.main-home .bio .dynamic-text li {
+  list-style: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(3) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -100px;
+  }
+}
+
+.main-home .bio .dynamic-text li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 33px;
+}
+
+.main-home .bio .dynamic-text li span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  background-color: var(--primary);
+  border-left: 2px solid var(--bg);
+  animation: typing 4s steps(14) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 5px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.main-home .picture {
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  position: relative;
+  box-shadow: 0px 0px 10px 0px var(--bg);
+}
+.main-home .picture:hover {
+  box-shadow: 0 0 12px 0 var(--bg);
+}
+
+.main-home .picture img {
+  filter: brightness(90%);
+  width: 250px;
+  transition: 2s;
+  transform: scale(1.1);
+}
+
+.main-home .picture img:hover {
+  transform: scale(1.3) translateY(30px);
+  filter: brightness(100%);
+}
+
+/* main profil */
+.main-profil .profil {
+  background-color: #312d2c;
+  margin: 0 10.5rem;
+  border-radius: 10px;
+  padding: 1.9rem;
+}
+
+.main-profil .profil .row h2 {
+  /* padding-left: 1.5rem;
+  padding-top: 1.5rem; */
+  font-size: 1.1rem;
+}
+
+.main-profil .profil .row hr {
+  width: 18rem;
+  transform: translateY(-13px) translateX(6rem);
+}
+
+.main-profil .profil .content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-profil .profil .content .picture {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  position: relative;
+}
+.main-profil .profil .content img {
+  width: 250px;
+  transform: scale(1.2) translateY(10px);
+}
+.main-profil .profil .content .content-profil {
+  width: 56%;
+  padding: 1rem;
+}
+
+.main-profil .profil .content .content-profil p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.main-profil .skill {
+  margin: 3rem 11rem;
+  margin-bottom: 8rem;
+}
+.main-profil .skill .row h3 {
+  margin-left: 5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+.main-profil .skill .row hr {
+  width: 4rem;
+  transform: translateY(-1.8rem) translateX(10px);
+}
+
+.main-profil .skill .skill-nav img {
+  width: 40px;
+  transform: translateY(3px);
+}
+
+.main-profil .skill .skill-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-profil .skill .skill-nav .kotak {
+  border: 2px solid var(--bg);
+  width: 12rem;
+  height: 4rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 0.8rem;
+}
+
+.main-profil .skill .skill-nav .kotak .ktr h4 {
+  transform: translateY(7px) translateX(-5px);
+  transition: 0.9s;
+}
+
+.main-profil .skill .skill-nav .kotak:hover h4 {
+  transform: translateY(0);
+}
+
+.main-profil .skill .skill-nav .kotak .ktr p {
+  color: silver;
+  transform: scale(0);
+  transition: 0.9s;
+  font-size: 0.7rem;
+}
+.main-profil .skill .skill-nav .kotak:hover p {
+  transform: scale(1);
+}
+
+/* main gallery */
+.main-gallery,
+.main-task,
+.main-profil {
+  margin-top: 5rem;
+  color: #fff;
+}
+
+.main-gallery h2,
+.main-task h2 {
+  font-size: 1.2rem;
+}
+
+.main-gallery h2,
+p,
+.main-task h2,
+p {
+  text-align: center;
+}
+
+.main-gallery p,
+.main-task p {
+  color: silver;
+  font-size: 0.8rem;
+}
+
+.main-gallery .gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.main-gallery .gallery .card {
+  background-color: #303030;
+  margin: 0 0.4rem;
+  margin-bottom: 0.7rem;
+  padding: 1.1rem;
+  width: 20rem;
+  height: 18rem;
+  border-radius: 10px;
+  transition: 0.9s;
+}
+
+.main-gallery .gallery .card:hover {
+  transform: translateY(-3px);
+  background-color: #3b3b3b;
+}
+
+.main-gallery .gallery .card .content h3 {
+  /* margin-top: -40px; */
+  font-size: 1rem;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.main-gallery .gallery .card p {
+  /* margin-top: -45px; */
+  font-size: 0.8rem;
+  /* line-height: 1.1rem; */
+  color: silver;
+}
+
+.main-gallery .gallery .card .lanjutan {
+  text-align: right;
+}
+.main-gallery .gallery .card .lanjutan a {
+  color: #fff;
+}
+
+.main-gallery .gallery .card img {
+  border-radius: 10px;
+}
+
+/* Main-Task */
+.main-task .content-task {
+  margin: 0 10rem;
+  margin-top: 1rem;
+  background-color: #312d2c;
+  border-radius: 4px;
+  padding: 10px;
+}
+.main-task .content-task .input button {
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 3px;
+  background-color: var(--bg);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.main-task .content-task .input input {
+  padding: 0.4rem 2rem;
+  padding-right: 4rem;
+  padding-left: 1rem;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.9rem;
+  text-align: left;
+  background-color: var(--primary);
+  border: 1px solid silver;
+  border-right: none;
+}
+
+.main-task .content-task .input a {
+  background-color: var(--bg);
+  padding: 0.4rem 0.7rem;
+  border-radius: 0px 4px 4px 0px;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+}
+
+.main-task .content-task .input .search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.main-task .content-task .task .judul-task h3 {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+.main-task .content-task .task .tumbnail ul li {
+  list-style: none;
+  /* border: 1px solid rgb(141, 141, 141); */
+  box-shadow: 0px 0px 2px 0px silver;
+  font-size: 0.9rem;
+  margin: 10px 0;
+  padding: 0.4rem;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-task .content-task .task .tumbnail ul li .btn-1 {
+  background-color: blue;
+  border: none;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+.main-task .content-task .task .tumbnail ul li .btn-2 {
+  background-color: green;
+  border: none;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+.main-task .content-task .task .tumbnail ul li .btn-3 {
+  background-color: red;
+  border: none;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+/* footer */
+footer {
+  background-color: var(--primary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  color: silver;
+  line-height: 4rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer p a {
+  color: var(--bg);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg);
+  border-radius: 6px;
+}
+
+/* media kueris */
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  nav .navbar-nav {
+    position: fixed;
+    right: 0;
+    bottom: -100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5rem;
+    background-color: var(--primary);
+    width: 100vw;
+    transition: 0.3s;
+  }
+
+  nav .navbar-nav a {
+    font-size: 1rem;
+  }
+
+  nav .navbar-extra a #humberger-menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  nav .navbar-nav.active {
+    bottom: 0;
+    background-color: #303030;
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .main-home {
+    font-size: 3rem;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-home .bio {
+    order: 2;
+    margin-top: -200px;
+    text-align: center;
+  }
+
+  .main-home .picture {
+    order: 1;
+    scale: 0.8;
+  }
+
+  /* main profil */
+  .main-profil .profil {
+    margin: 0 15px;
+  }
+
+  .main-profil .profil .content {
+    flex-wrap: wrap;
+  }
+
+  .main-profil .profil .content .picture {
+    width: 280px;
+    height: 280px;
+    margin-top: 1rem;
+  }
+  .main-profil .profil .content .picture img {
+    width: 230px;
+  }
+
+  .main-profil .profil .content .content-profil {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .main-profil .skill {
+    margin: 1rem 1rem 15rem 1rem;
+  }
+
+  /* galery */
+  .main-gallery .gallery {
+    margin-bottom: 5rem;
+  }
+
+  .main-gallery .gallery .card {
+    width: 30rem;
+    height: 23rem;
+  }
+
+  /* task */
+  .main-task .content-task {
+    margin: 1rem 2rem 0;
+  }
+
+  .main-task .content-task .task .tumbnail ul li .btn {
+    display: none;
+  }
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 58%;
+  }
+}
